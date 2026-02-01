@@ -3,7 +3,6 @@ package com.oxipro.bedwars.ratio.papi;
 import com.tomkeuper.bedwars.api.BedWars;
 import com.tomkeuper.bedwars.api.arena.IArena;
 import com.tomkeuper.bedwars.api.stats.IStatsManager;
-import com.tomkeuper.bedwars.stats.StatsManager;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import me.leoo.utils.bukkit.config.ConfigManager;
 import org.bukkit.OfflinePlayer;
@@ -92,16 +91,35 @@ public class BW2023Placeholders extends PlaceholderExpansion {
                 int arenaFinalKills = arena.getPlayerKills(OnlinePlayer, true);
                 int arenaFinalDeaths = arena.getPlayerDeaths(OnlinePlayer, true);
 
+
+                double kdBefore = totalDeaths == 0 ? totalKills : (double) totalKills / totalDeaths;
+                double kdAfter = (double) (totalKills + arenaKills) / Math.max(1, totalDeaths + arenaDeaths);
+                double adeltaKD = kdAfter - kdBefore;
+                String akdrdiff = deltaFormat.format(kdAfter - kdBefore);
+
+                double fkdBefore = totalFinalDeaths == 0 ? totalKills : (double) totalKills / totalFinalDeaths;
+                double fkdAfter = (double) (totalFinalKills + arenaFinalKills) / Math.max(1, totalFinalDeaths + arenaFinalDeaths);
+                double afdeltaKD = fkdAfter - fkdBefore;
+                String afkdrdiff = deltaFormat.format(afdeltaKD);
+
+
                 switch (params) {
                     case "akdrdiff":
-                        double kdBefore = totalDeaths == 0 ? totalKills : (double) totalKills / totalDeaths;
-                        double kdAfter = (double) (totalKills + arenaKills) / Math.max(1, totalDeaths + arenaDeaths);
-                        return deltaFormat.format(kdAfter - kdBefore);
+                        return akdrdiff;
                     case "afkdrdiff":
-                        double fkdBefore = totalFinalDeaths == 0 ? totalKills : (double) totalKills / totalFinalDeaths;
-                        double fkdAfter = (double) (totalFinalKills + arenaFinalKills) / Math.max(1, totalFinalDeaths + arenaFinalDeaths);
-                        double fdeltaKD = fkdAfter - fkdBefore;
-                        return deltaFormat.format(fdeltaKD);
+                        return afkdrdiff;
+                    case "akdrdiffcolor":
+                        if (adeltaKD > 0) {
+                            return config.getString("ratio.placeholders.diff-positive-colorcode") + adeltaKD;
+                        } else {
+                            return config.getString("ratio.placeholders.diff-negative-colorcode") + adeltaKD;
+                        }
+                    case "afkdrdiffcolor":
+                        if (afdeltaKD > 0) {
+                            return config.getString("ratio.placeholders.diff-positive-colorcode") + afdeltaKD;
+                        } else {
+                            return config.getString("ratio.placeholders.diff-negative-colorcode") + afdeltaKD;
+                        }
                     case "akdr":
                         if (arenaDeaths != 0) {
                             return decimalFormat.format(arenaKills / arenaDeaths);

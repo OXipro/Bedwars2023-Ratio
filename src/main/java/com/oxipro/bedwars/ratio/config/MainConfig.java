@@ -8,5 +8,7 @@ public class MainConfig extends ConfigManager {
         super(name, directory);
 
         add("ratio.placeholders.null-text", "Nan");
+        add("ratio.placeholders.diff-positive-colorcode", "&c");
+        add("ratio.placeholders.diff-negative-colorcode", "&a");
     }
 }
