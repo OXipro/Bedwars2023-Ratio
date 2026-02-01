@@ -1,19 +1,12 @@
 package com.oxipro.bedwars.ratio;
 
-import com.oxipro.bedwars.ratio.papi.BW2023Placeholders;
-import com.oxipro.bedwars.ratio.papi.BW2023ProxyPlaceholders;
-import com.oxipro.bedwars.ratio.support.AddonClass.BW2023Addon;
-import com.oxipro.bedwars.ratio.support.AddonClass.BW2023ProxyAddon;
 import com.oxipro.bedwars.ratio.support.BW2023;
 import com.oxipro.bedwars.ratio.support.BW2023Proxy;
-import com.tomkeuper.bedwars.api.BedWars;
-import com.tomkeuper.bedwars.proxy.BedWarsProxy;
 import lombok.Getter;
 import com.oxipro.bedwars.ratio.config.MainConfig;
 import com.oxipro.bedwars.ratio.utils.BedwarsMode;
 import me.leoo.utils.bukkit.Utils;
 import me.leoo.utils.bukkit.config.ConfigManager;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import static org.bukkit.Bukkit.getPluginManager;

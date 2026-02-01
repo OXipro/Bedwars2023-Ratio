@@ -54,21 +54,6 @@
             <scope>provided</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.andrei1058.bedwars</groupId>-->
-<!--            <artifactId>bedwars-api</artifactId>-->
-<!--            <version>23.12.2</version>-->
-<!--            <scope>system</scope>-->
-<!--            <systemPath>${project.basedir}/libs/bedwars-plugin-23.12.2.jar</systemPath>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.andrei1058.bedwars.proxy</groupId>-->
-<!--            <artifactId>proxy-api</artifactId>-->
-<!--            <version>1.2.4</version>-->
-<!--            <scope>system</scope>-->
-<!--            <systemPath>${project.basedir}/libs/proxy-plugin-1.2.4.jar</systemPath>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>com.tomkeuper.bedwars</groupId>
             <artifactId>bedwars-api</artifactId>

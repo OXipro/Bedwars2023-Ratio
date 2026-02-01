@@ -97,7 +97,7 @@ public class BW2023Placeholders extends PlaceholderExpansion {
                 double adeltaKD = kdAfter - kdBefore;
                 String akdrdiff = deltaFormat.format(kdAfter - kdBefore);
 
-                double fkdBefore = totalFinalDeaths == 0 ? totalKills : (double) totalKills / totalFinalDeaths;
+                double fkdBefore = totalFinalDeaths == 0 ? totalFinalKills : (double) totalFinalKills / totalFinalDeaths;
                 double fkdAfter = (double) (totalFinalKills + arenaFinalKills) / Math.max(1, totalFinalDeaths + arenaFinalDeaths);
                 double afdeltaKD = fkdAfter - fkdBefore;
                 String afkdrdiff = deltaFormat.format(afdeltaKD);
