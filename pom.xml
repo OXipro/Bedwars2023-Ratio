@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.leoo.bedwars</groupId>
-    <artifactId>Bedwars1058-Ratio</artifactId>
-    <version>1.1.6</version>
+    <groupId>com.oxipro.bedwars</groupId>
+    <artifactId>Bedwars2023-Ratio</artifactId>
+    <version>1.5</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -25,6 +25,10 @@
         <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        <repository>
+            <id>bedwars2023-releases</id>
+            <url>https://repo.tomkeuper.com/repository/releases/</url>
         </repository>
     </repositories>
 
@@ -50,30 +54,47 @@
             <scope>provided</scope>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>com.andrei1058.bedwars</groupId>-->
+<!--            <artifactId>bedwars-api</artifactId>-->
+<!--            <version>23.12.2</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/libs/bedwars-plugin-23.12.2.jar</systemPath>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.andrei1058.bedwars.proxy</groupId>-->
+<!--            <artifactId>proxy-api</artifactId>-->
+<!--            <version>1.2.4</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/libs/proxy-plugin-1.2.4.jar</systemPath>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>com.andrei1058.bedwars</groupId>
+            <groupId>com.tomkeuper.bedwars</groupId>
             <artifactId>bedwars-api</artifactId>
-            <version>23.12.2</version>
+            <version>4.0.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/bedwars-plugin-23.12.2.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.andrei1058.bedwars.proxy</groupId>
-            <artifactId>proxy-api</artifactId>
-            <version>1.2.4</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/proxy-plugin-1.2.4.jar</systemPath>
+            <systemPath>${project.basedir}/libs/BedWars-4.0.0-SNAPSHOT.jar</systemPath>
+
         </dependency>
 
         <dependency>
-            <groupId>me.leoo.utils</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.7.17</version>
+            <groupId>com.tomkeuper.bedwars</groupId>
+            <artifactId>BWProxy2023</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/proxy-plugin-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.leo18bernese</groupId>
+            <artifactId>Utils</artifactId>
+            <version>2.1.10</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>Bedwars1058-Ratio-${project.version}</finalName>
+        <finalName>BedWars2023-Ratio-${project.version}</finalName>
         <defaultGoal>clean install</defaultGoal>
         <resources>
             <resource>

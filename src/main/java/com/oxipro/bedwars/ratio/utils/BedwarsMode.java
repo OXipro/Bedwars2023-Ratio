@@ -1,4 +1,4 @@
-package me.leoo.bedwars.ratio.utils;
+package com.oxipro.bedwars.ratio.utils;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum BedwarsMode {
-    BEDWARS("BedWars1058"), PROXY("BedWarsProxy");
+    BEDWARS("BedWars2023"), PROXY("BWProxy2023");
 
     private final String name;
 

@@ -1,10 +1,10 @@
-name: BedWars1058-Ratio
+name: BedWars2023-Ratio
 version: ${project.version}
-author: itz_leoo
-main: me.leoo.bedwars.ratio.Main
-description: BedWars1058 Ratio stats Addon
+authors: [itz_leoo, OXipro]
+main: com.oxipro.bedwars.ratio.Main
+description: BedWars2023 Ratio stats Addon
 depend:
   - PlaceholderAPI
 softdepend:
-  - BedWars1058
-  - BedWarsProxy
+  - BedWars2023
+  - BWProxy2023

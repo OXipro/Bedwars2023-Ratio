@@ -1,4 +1,4 @@
-package me.leoo.bedwars.ratio.config;
+package com.oxipro.bedwars.ratio.config;
 
 import me.leoo.utils.bukkit.config.ConfigManager;
 
