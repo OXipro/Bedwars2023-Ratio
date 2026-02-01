@@ -109,16 +109,16 @@ public class BW2023Placeholders extends PlaceholderExpansion {
                     case "afkdrdiff":
                         return afkdrdiff;
                     case "akdrdiffcolor":
-                        if (adeltaKD > 0) {
-                            return config.getString("ratio.placeholders.diff-positive-colorcode") + adeltaKD;
+                        if (adeltaKD >= 0) {
+                            return config.getString("ratio.placeholders.diff-positive-colorcode") + akdrdiff;
                         } else {
-                            return config.getString("ratio.placeholders.diff-negative-colorcode") + adeltaKD;
+                            return config.getString("ratio.placeholders.diff-negative-colorcode") + akdrdiff;
                         }
                     case "afkdrdiffcolor":
-                        if (afdeltaKD > 0) {
-                            return config.getString("ratio.placeholders.diff-positive-colorcode") + afdeltaKD;
+                        if (afdeltaKD >= 0) {
+                            return config.getString("ratio.placeholders.diff-positive-colorcode") + afkdrdiff;
                         } else {
-                            return config.getString("ratio.placeholders.diff-negative-colorcode") + afdeltaKD;
+                            return config.getString("ratio.placeholders.diff-negative-colorcode") + afkdrdiff;
                         }
                     case "akdr":
                         if (arenaDeaths != 0) {

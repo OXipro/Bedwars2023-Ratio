@@ -6,7 +6,7 @@
 
     <groupId>com.oxipro.bedwars</groupId>
     <artifactId>Bedwars2023-Ratio</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
